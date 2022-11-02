@@ -5,96 +5,46 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Aprendiendo FlexBox</title>
-
- <style>
-  *,
-  *::after,
-  *::before {
-   box-sizing: border-box;
-  }
-
-
-  .container {
-   background-color: #333;
-   height: 30vh;
-   width: 100%;
-
-   display: flex;
-   flex-flow: row nowrap;
-
-   justify-content: flex-start;
-
-   align-items: stretch;
-
-   align-content: flex-start;
-  }
-
-  .item {
-   border: thin solid #999;
-   /* width: 20%;
-   height: 20%; */
-   background-color: #666;
-   flex-grow: 0;
-   flex-shrink: 0;
-   flex-basis: auto;
-
-  }
-
-  .item:nth-child(2) {
-   flex-shrink: 1;
-  }
-
-  .item:nth-child(3) {
-   flex-shrink: 5;
-  }
-
-  /*  .item:nth-child(2),
-  .item:nth-child(17) {
-   font-size: 250%;
-  } */
- </style>
-
+ <title>Curso FlexBox JonMircha</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
- <section class="container">
-  <article class="item">Flex Item Flex Item Flex Item</article>
-  <article class="item">Flex Item Flex Item Flex Item</article>
-  <article class="item">Flex Item Flex Item Flex Item</article>
- </section>
- <br />
 
- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <nav>
+  <ul class="container">
+   <li class="item">
+    <a href="./v1-9.html">Videos 1 al 9</a>
+   </li>
+   <li class="item">
+    <a href="./v10.html">Maquetación y Responsive Design con Flexbox</a>
+   </li>
+   <li class="item"></li>
+  </ul>
+ </nav>
 
- <section class="container">
-  <article class="item">Flex Item</article>
-  <article class="item">Flex Item</article>
-  <article class="item">Flex Item</article>
- </section>
- <br />
-
- <section class="container">
-  <article class="item">Item 1</article>
-  <article class="item">Item 2</article>
-  <article class="item">Item 3</article>
-  <article class="item">Item 4</article>
-  <article class="item">Item 5</article>
-  <article class="item">Item 6</article>
-  <article class="item">Item 7</article>
-  <article class="item">Item 8</article>
-  <article class="item">Item 9</article>
-  <article class="item">Item 10</article>
-  <article class="item">Item 11</article>
-  <article class="item">Item 12</article>
-  <article class="item">Item 13</article>
-  <article class="item">Item 14</article>
-  <article class="item">Item 15</article>
-  <article class="item">Item 16</article>
-  <article class="item">Item 17</article>
-  <article class="item">Item 18</article>
-  <article class="item">Item 19</article>
- </section>
+ <main>
+  <article>
+   <h2>Artículos de ejemplo 1</h2>
+   <figure>
+    <img src="https://placeimg.com/300/300/tech" alt="tech">
+    <figcaption>Epigrafe 1</figcaption>
+   </figure>
+   <p>Lorem ipsum Lorem, ipsum dolor sit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quisquam
+    nihil eligendi accusantium aliquam voluptates consectetur sunt impedit maxime dignissimos magni neque, eaque
+    perferendis ducimus facilis, quia consequuntur reprehenderit deleniti!</p>
+  </article>
+  <article>
+   <h2>Segundo artículos de ejemplo</h2>
+   <figure>
+    <img src="https://placeimg.com/300/300/people" alt="people">
+    <figcaption>Epigrafe 2</figcaption>
+   </figure>
+   <p>Lorem ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio nam dolores quaerat
+    expedita dicta? Autem corrupti quasi harum sit, distinctio qui tenetur explicabo! Fugiat ipsum velit temporibus
+    facere a natus.</p>
+  </article>
+ </main>
 
 </body>
 

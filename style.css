@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #eee;
+  overflow-x: hidden;
+  background-color: #111;
+}
+
+.container {
+  color: #333;
+  text-align: center;
+  background-color: #333;
+  height: 10vh;
+  width: 100%;
+  border-radius: 0 0 1rem 1rem;
+
+  display: flex;
+  flex-flow: row nowrap;
+
+  justify-content: flex-start;
+
+  align-items: stretch;
+
+  align-content: flex-start;
+}
+
+.item {
+  /* height: 2rem; */
+  background-color: rgb(175, 175, 175);
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  flex-basis: 50px;
+  flex: 1 1 50px;
+}
+
+.item:nth-child(1) {
+  background-color: #ddb;
+}
+.item:nth-child(2) {
+  background-color: #ddf;
+  flex-grow: 2;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  margin: 0.5rem;
+  background-color: #333;
+  min-height: 80vh;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+article {
+  margin: 1rem;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+article img {
+  border-radius: 0.5rem;
+  max-width: 20rem;
+}
+p {
+  align-self: stretch;
+}
