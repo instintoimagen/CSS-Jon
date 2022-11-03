@@ -4,9 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  color: #fd9;
+  background-color: #152025;
+}
+
 .container {
   margin: auto;
-  max-width: 1200px;
+  max-width: 1500px;
+  background-color: #334;
 }
 
 .flex-container {
@@ -19,29 +25,112 @@
   flex: 0 0 100%;
 }
 
-/* Small devices (landscape phones, 576px and up) */
+.indColumn {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 0 3rem;
+  border: 0.5rem dotted #ff0;
+  max-width: fit-content;
+}
+
+/* XS - Extra small devices (vertical phones, <576px) */
+@media (min-width: 0) {
+  .ind-xs {
+    display: block;
+  }
+  .ind-s,
+  .ind-m,
+  .ind-l,
+  .ind-xl,
+  .ind-xxl {
+    display: none;
+  }
+}
+/* S - Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-  ...;
+  .flex-item {
+    flex: 0 0 50%;
+  }
+  .ind-s {
+    display: block;
+  }
+  .ind-xs,
+  .ind-m,
+  .ind-l,
+  .ind-xl,
+  .ind-xxl {
+    display: none;
+  }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* M - Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  ...;
+  .flex-item {
+    flex: 0 0 33.33333333333333%;
+  }
+  .ind-m {
+    display: block;
+  }
+  .ind-xs,
+  .ind-s,
+  .ind-l,
+  .ind-xl,
+  .ind-xxl {
+    display: none;
+  }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* L - Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  ...;
+  .flex-item {
+    flex: 0 0 25%;
+  }
+  .ind-l {
+    display: block;
+  }
+  .ind-sx,
+  .ind-s,
+  .ind-m,
+  .ind-xl,
+  .ind-xxl {
+    display: none;
+  }
 }
 
 /*  X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  ...;
+  .flex-item {
+    flex: 0 0 16.66666666666666%;
+  }
+  .ind-xl {
+    display: block;
+  }
+  .ind-xs .ind-s,
+  .ind-m,
+  .ind-l,
+  .ind-xxl {
+    display: none;
+  }
 }
 
 /*  XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  ...;
+  .flex-item {
+    flex: 0 0 8.33333333333333%;
+  }
+  .ind-xxl {
+    display: block;
+  }
+  .ind-xs,
+  .ind-s,
+  .ind-m,
+  .ind-l,
+  .ind-xl {
+    display: none;
+  }
 }
 
 /*  - - -  Practica con ejercicios anteriores - - - -  */

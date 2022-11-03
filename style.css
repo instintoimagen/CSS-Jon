@@ -13,24 +13,19 @@ html {
   background-color: #111;
 }
 
-.container {
-  color: #333;
-  text-align: center;
-  background-color: #333;
-  height: 10vh;
-  width: 100%;
-  border-radius: 0 0 1rem 1rem;
-
+body {
   display: flex;
-  flex-flow: row nowrap;
-
-  justify-content: flex-start;
-
-  align-items: stretch;
-
-  align-content: flex-start;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+.menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
 .item {
   /* height: 2rem; */
   background-color: rgb(175, 175, 175);
@@ -40,7 +35,6 @@ html {
   flex-basis: 50px;
   flex: 1 1 50px;
 }
-
 .item:nth-child(1) {
   background-color: #ddb;
 }
@@ -48,20 +42,33 @@ html {
   background-color: #ddf;
   flex-grow: 2;
 }
-
 li {
-  list-style: none;
+  list-style-type: none;
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  text-align: center;
+  background-color: #333;
+  height: 10vh;
+  width: 100%;
+  min-height: 50%;
+  border-radius: 0 0 1rem 1rem;
+}
+.logo {
+  margin: 1rem;
+  align-self: flex-start;
+}
 main {
+  flex-grow: 1; /*  */
   margin: 0.5rem;
   background-color: #333;
-  min-height: 80vh;
+  /* min-height: 80vh; */
   border-radius: 1rem;
   display: flex;
   flex-flow: row wrap;
@@ -81,4 +88,29 @@ article img {
 }
 p {
   align-self: stretch;
+}
+
+footer {
+  background-color: #252525;
+  padding: 1rem;
+  border-radius: 1rem 1rem 0 0;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    width: fit-content;
+    align-items: flex-start;
+  }
+  .menu {
+    flex-direction: column;
+  }
+  .item {
+    background-color: rgb(175, 175, 175);
+    flex: 0 1 auto;
+  }
+  .logo {
+    margin: 1rem -1.5rem 1rem 1rem;
+  }
 }
