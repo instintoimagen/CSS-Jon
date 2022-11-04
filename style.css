@@ -73,6 +73,7 @@ main {
   display: flex;
   flex-flow: row wrap;
 }
+
 article {
   margin: 1rem;
   padding: 1rem 0;
@@ -80,7 +81,7 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 500px;
+  /* max-width: 500px; */
 }
 article img {
   border-radius: 0.5rem;
@@ -89,7 +90,33 @@ article img {
 p {
   align-self: stretch;
 }
-
+.background-image {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 80vh;
+  width: 100%;
+  background-image: url("https://placeimg.com/1280/720/tech");
+  background-repeat: no-repeat;
+}
+.background-image div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 auto;
+}
+.background-image h1 {
+  padding: 1.5rem 1rem;
+  background-color: rgba(127, 127, 127, 0.55);
+}
+.background-image h3 {
+  display: flex;
+  top: 14rem;
+  left: 1rem;
+  padding: 0.5rem 0.25rem;
+  background-color: rgba(255, 34, 34, 0.75);
+  color: #111;
+}
 footer {
   background-color: #252525;
   padding: 1rem;
