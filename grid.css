@@ -1,0 +1,114 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a[href="#top"] {
+  margin: 1rem;
+  display: block;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 50vh;
+  text-align: center;
+}
+
+img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.menu {
+  margin-bottom: 100vh;
+  font-size: 125%;
+}
+
+.menu li {
+  margin-bottom: 1rem;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  height: 80vh;
+  background-color: #222;
+  border: medium solid #000;
+}
+
+.item {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #666;
+  border: medium solid #999;
+}
+.grid-explicit {
+  display: grid;
+  /* grilla de 3 x 3 */
+  grid-template-rows: 2rem 20vh 30%;
+  grid-template-columns: 50% 100px 1fr;
+  /* grilla de 5 x 4 */
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(4, 1fr);
+  /* Grilla de 4 x 5 */
+  grid-template-columns: 20% repeat(2, 30%) 1fr;
+  grid-template-rows: repeat(5, auto);
+  /*  gap (filas columnas) */
+  gap: 2px 5px;
+}
+
+.grid-explicit .item:nth-child(10) {
+  color: #ff3;
+  background-color: #08c;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.grid-explicit .item:nth-child(11) {
+  color: #faf;
+  background-color: #03a;
+  grid-row: 5/6;
+  grid-column: 4/5;
+}
+.grid-explicit .item:nth-child(12) {
+  color: #7f3;
+  background-color: #038;
+  grid-row: 4/5; /* start / end */
+  grid-column: 3/5;
+}
+.grid-explicit .item:nth-child(1) {
+  color: #d4a;
+  background-color: #038;
+  grid-area: 2/2/3/3;
+  /* r start/c start/r end/c end */
+}
+.grid-explicit .item:nth-child(2) {
+  color: #cc0;
+  background-color: #223;
+  grid-column: span 4;
+  /* con "span" especifico cuantas posicionas va a "abarcar" */
+}
+
+.grid-explicit .item:nth-child(14) {
+  color: #6c3;
+  background-color: #732;
+  grid-row: 6 / span 2;
+  /* especifico la línea de comienzo (start) e indico cuanto abarca desde ahí (span) */
+}
