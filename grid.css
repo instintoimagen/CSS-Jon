@@ -112,3 +112,50 @@ img {
   grid-row: 6 / span 2;
   /* especifico la línea de comienzo (start) e indico cuanto abarca desde ahí (span) */
 }
+
+/* Nombres de "grid-lines" */
+.grid-line-names {
+  display: grid;
+
+  /* grid 3x3 */
+  grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr [linea-c4];
+  grid-template-rows: [linea-r1] auto [linea-r2] auto [linea-r3] auto [linea-r4];
+}
+.grid-line-names .item:nth-child(4) {
+  color: #ff0;
+  background-color: #474;
+  grid-column: linea-c1 / linea-c4;
+}
+
+/*  Asignar Nombres de Areas  */
+.grid-areas {
+  display: grid;
+  /*  Grid 2 column x 4 row */
+  grid-template-columns: auto 150px;
+  grid-template-rows: 100px repeat(2, 1fr) 120px;
+
+  /* Layout */
+  grid-template-areas:
+    "header header "
+    "content sidebar "
+    "content ."
+    "footer footer ";
+}
+
+/* Asignar los espacios de Layout por el selector de clase */
+.header {
+  grid-area: header;
+  color: #999;
+  background-color: #03a;
+}
+.content {
+  grid-area: content;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: #7f3;
+}
+.footer {
+  grid-area: footer;
+  background-color: #038;
+}
