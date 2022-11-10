@@ -159,3 +159,37 @@ img {
   grid-area: footer;
   background-color: #038;
 }
+
+/*  Griod implícita */
+.grid-implicit {
+  display: grid;
+  /* Grid 4x3 Explícita */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  /* ...si hay más celdas (de las 4x3 previstas), las demás se agregan en forma de grid implícita, con tamaños que dependen del contenido y disposición según el flujo de la grid */
+}
+
+/* Flujo de la grid */
+.grid-flow {
+  display: grid;
+  /* Grid 5x3 Explícita */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  /* "grid-auto-flow" propiedad que determina cuál es el flujo que va a seguir mi cuadrícula, p.e.: si especifico column, el "flujo" se va a comportar en columna, las celdas agregadas se ubicarán en nuevas columnas a la derecha, no se generarán nuevas filas abajo (grid implícita) */
+  grid-auto-flow: column;
+  /* "grid-auto-column" especifica que las nuevas columnas que se agregan, tendrán el valor especificado, en lugar de crecer en auto. Del mismo modo si estuviera especificado el "grid-auto-flow" en row, utlizaríamos "grid-auto-rows" para indicar el valor. */
+  grid-auto-columns: 150px;
+}
+.grid-flow-dense {
+  display: grid;
+  /* Grid 5x4 Explícita */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 200px);
+  /* Para ubicar las celdas de modo que no queden espacios vacíos, utilizamos el valor "dense" en la propiedad "grid-auto-flow". También podemos poner ambos valores ("dense" y "row") */
+  grid-auto-flow: dense;
+}
+.grid-flow-dense .item:nth-child(9) {
+  color: #ff4;
+  grid-row: span 3;
+  grid-column: span 3;
+}
