@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  /* En Mobil el grid es 6x5 */
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 10vh 10vh 35vh 30vh 15vh;
+  grid-template-areas:
+    "header header header header header header"
+    "nav nav nav nav nav nav"
+    "uc-left uc-left uc-center uc-center uc-right uc-right"
+    "middle middle middle lower lower lower"
+    "footer footer footer footer footer footer";
+}
+
+body > * {
+  background-color: #888;
+  border: thin dotted #ccc;
+}
+
+h2 {
+  text-align: center;
+}
+h4 {
+  text-align: center;
+  margin: -1rem;
+}
+a {
+  display: block;
+  padding: 0.15rem;
+  margin: 0.5rem;
+  width: fit-content;
+  text-decoration: none;
+  color: inherit;
+  background-color: #684;
+  border: thin solid #2f3;
+  border-radius: 0.25rem;
+  box-shadow: 2px 3px 2px 2px #9f9;
+}
+
+.header {
+  grid-area: header;
+  background-color: #688;
+}
+.nav {
+  grid-area: nav;
+  background-color: #867;
+}
+.uc-left {
+  grid-area: uc-left;
+  background-color: #668;
+}
+.uc-center {
+  display: grid;
+  justify-items: center;
+  grid-area: uc-center;
+  background-color: #846;
+}
+.uc-right {
+  grid-area: uc-right;
+  background-color: #684;
+}
+.middle {
+  grid-area: middle;
+  background-color: #644;
+}
+.lower {
+  grid-area: lower;
+  background-color: #884;
+}
+.footer {
+  grid-area: footer;
+}
+
+@media screen and (min-width: 1024px) {
+  /* Grid 5x5 */
+  body {
+    grid-template-columns: 1fr repeat(4, 2fr);
+    grid-template-rows: 10vh 30vh 25vh 25vh 10vh;
+    grid-template-areas:
+      "header header header header header"
+      "nav uc-left uc-center uc-center uc-right"
+      "nav middle middle middle middle"
+      "nav lower lower lower lower"
+      "footer footer footer footer footer";
+  }
+}
