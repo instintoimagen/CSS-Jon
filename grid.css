@@ -249,7 +249,6 @@ img {
 }
 
 /* Alineamiento de Grid */
-
 .grid-align {
   display: grid;
   /* Grid de 3x2 */
@@ -267,4 +266,48 @@ img {
 }
 .grid-align .item:nth-child(5) {
   grid-area: 2 / 2 / 4 /4;
+}
+
+/*  Alineamiento con tracks */
+.grid-align-tracks {
+  display: grid;
+  /* Grid de 3x2 */
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
+
+.grid-min-max {
+  display: grid;
+  /* Grid 4 column x ? filas (las necesarias) */
+  grid-template-columns: repeat(4, minmax(100px, 200px));
+  grid-template-columns: repeat(4, minmax(min-content, 200px));
+  grid-template-columns: repeat(4, minmax(125px, max-content));
+  grid-template-columns: repeat(4, minmax(150px, max-content));
+}
+
+.grid-repeat {
+  display: grid;
+  /*  Grid 4x3 */
+  grid-template-columns: repeat(4, 10% 20% 30% 40%);
+  grid-template-columns: 10% 20% 30% 40%;
+}
+
+.grid-dynamics {
+  display: grid;
+  /* Grid 4 column. No definimos filas, se hacen implícitas */
+  grid-template-columns: repeat(4, 100px);
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+/* Responsive sin media queries */
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+  /*   grid-template-rows: repeat(auto-fit, 200px); */
 }
